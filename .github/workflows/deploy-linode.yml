@@ -7,7 +7,6 @@ env:
 
 jobs:
   deploy-linode:
-  name: "deploy a linode instance using Terraform"
   runs-on: ubuntu-latest
   steps:
     - name: install Terraform on runner
