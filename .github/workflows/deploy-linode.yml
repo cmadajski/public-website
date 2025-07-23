@@ -6,17 +6,18 @@ env:
   LINODE_TOKEN: ${{ secrets.LINODE_TOKEN }}
 
 jobs:
-  name: deploy-linode
+  deploy-linode:
+  name: "deploy a linode instance using Terraform"
   runs-on: ubuntu-latest
   steps:
     - name: install Terraform on runner
-      run: sudo apt install 
+      run: apt upgrade && apt install terraform
     - name: check TF installation
       run: terraform version
-    - name: initialize TF
-      run: terraform init
-    - name: show TF plan
-      run: terraform plan
-    - name: deploy the TF
-      run: terraform plan -auto-approve
+#    - name: initialize TF
+#      run: terraform init
+#    - name: show TF plan
+#      run: terraform plan
+#    - name: deploy the TF
+#      run: terraform plan -auto-approve
   
