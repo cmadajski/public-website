@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: install Terraform on runner
-        run: apt upgrade && apt install terraform
+        run: |
+          sudo apt-get update
+          sudo apt-get install terraform
       - name: check TF installation
         run: terraform version
 #    - name: initialize TF
