@@ -7,12 +7,12 @@ env:
 
 jobs:
   deploy-linode:
-  runs-on: ubuntu-latest
-  steps:
-    - name: install Terraform on runner
-      run: apt upgrade && apt install terraform
-    - name: check TF installation
-      run: terraform version
+    runs-on: ubuntu-latest
+    steps:
+      - name: install Terraform on runner
+        run: apt upgrade && apt install terraform
+      - name: check TF installation
+        run: terraform version
 #    - name: initialize TF
 #      run: terraform init
 #    - name: show TF plan
