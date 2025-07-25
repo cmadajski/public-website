@@ -18,6 +18,8 @@ jobs:
           sudo apt-get install terraform
       - name: check TF installation
         run: terraform version
+      - name: switch directory
+        run: cd terraform
       - name: initialize TF
         run: terraform init
       - name: show TF plan
