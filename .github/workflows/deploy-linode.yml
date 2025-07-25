@@ -1,6 +1,9 @@
 name: Deploy-Linode
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    branches:
+      - main
 
 env:
   LINODE_TOKEN: ${{ secrets.LINODE_TOKEN }}
@@ -18,6 +21,12 @@ jobs:
           sudo apt-get install terraform
       - name: check TF installation
         run: terraform version
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - name: check current dir path
+        run: pwd
+      - name: check dir/files in current location
+        run: ls -al
       - name: switch directory
         run: cd terraform
       - name: initialize TF
