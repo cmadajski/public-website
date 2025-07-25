@@ -20,10 +20,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install terraform
           terraform version
-          pwd
-          ls -al
           cd terraform
-          ls -al
           terraform init
           terraform plan
           terraform apply -auto-approve
