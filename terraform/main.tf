@@ -1,6 +1,8 @@
+# docs: https://registry.terraform.io/providers/linode/linode/latest/docs/resources/instance
+# more docs: https://www.linode.com/docs/guides/how-to-build-your-infrastructure-using-terraform-and-linode/
 resource "linode_instance" "app-instance" {
     image = "linode/fedora41"
-    label = "Personal Website - Streamlit"
+    label = "personal-website-streamlit"
     region = "us-southeast"
     type = "g6-nanode-1"
     tags = [
