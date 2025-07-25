@@ -12,6 +12,9 @@ jobs:
   deploy-linode:
     runs-on: ubuntu-latest
     steps:
+      - run: pwd
+      - run: ls -al
+      - run: git branch
       - name: install Terraform on runner
         # docs: https://www.linode.com/docs/guides/how-to-build-your-infrastructure-using-terraform-and-linode/#install-terraform
         run: |
@@ -29,6 +32,8 @@ jobs:
         run: ls -al
       - name: switch directory
         run: cd terraform
+      - run: ls -al
+      - run: git branch
       - name: initialize TF
         run: terraform init
       - name: show TF plan
