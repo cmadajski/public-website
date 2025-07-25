@@ -15,4 +15,12 @@ Current unknows:
 - what is the appropriate domain name and can I afford it?
 - where should I get certs from and how long will it take?
 
+## Resources:
 
+### Linode
+
+- [Linode All Available Images](https://api.linode.com/v4/images)
+- [Linode All Regions](https://api.linode.com/v4/regions)
+- [Linode All Instance Types](https://api.linode.com/v4/linode/types)
+- [Terraform - Linode Instance Resource](https://registry.terraform.io/providers/linode/linode/latest/docs/resources/instance)
+- [Using Terraform for Linode Guide](https://www.linode.com/docs/guides/how-to-build-your-infrastructure-using-terraform-and-linode/)
