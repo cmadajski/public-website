@@ -18,10 +18,10 @@ jobs:
           sudo apt-get install terraform
       - name: check TF installation
         run: terraform version
-#    - name: initialize TF
-#      run: terraform init
-#    - name: show TF plan
-#      run: terraform plan
-#    - name: deploy the TF
-#      run: terraform plan -auto-approve
+      - name: initialize TF
+        run: terraform init
+      - name: show TF plan
+        run: terraform plan
+      - name: deploy the TF
+        run: terraform plan -auto-approve
   
