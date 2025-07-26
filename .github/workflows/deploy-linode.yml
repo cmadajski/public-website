@@ -7,6 +7,7 @@ on:
 
 env:
   LINODE_TOKEN: ${{ secrets.LINODE_TOKEN }}
+  TF_VAR_root_pwd: ${{ secrets.ROOT_PWD }}
 
 jobs:
   deploy-linode:
