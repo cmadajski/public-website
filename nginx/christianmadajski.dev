@@ -1,0 +1,20 @@
+server {
+    listen 80,443;
+    server_name christianmadajski.dev
+
+    location / {
+        # forward requests
+        proxy_pass http://unix:/home/user/project/myproject.sock;
+
+        # forward headers
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;    
+    }
+    
+    location /static {
+        # serve static files for better performance
+        alias /home/user/project/static;
+    }
+}
