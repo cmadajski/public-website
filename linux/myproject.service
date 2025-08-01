@@ -1,0 +1,12 @@
+[Unit]
+Description=Python web application server
+After=network.target
+
+[Service]
+User=app
+Group=www-data
+WorkingDirectory=/home/app/myproject
+ExecStart=/home/app/myproject/.venv/bin/gunicorn --workers 3 --bind unix:myproject.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
